@@ -6,7 +6,12 @@ class FirstApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Text('Apollo Norm'),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Arcturus CXCI'),
+        ),
+        body: Text('This is Arcturus CXCI'),
+      ),
     );
   }
 }
