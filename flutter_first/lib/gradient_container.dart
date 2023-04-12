@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_first/styled_text.dart';
 
 class GradientContainer extends StatelessWidget {
   const GradientContainer({Key? key}) : super(key: key);
@@ -12,15 +13,7 @@ class GradientContainer extends StatelessWidget {
           Color.fromARGB(255, 43, 6, 108)
         ], begin: Alignment.topLeft, end: Alignment.bottomRight),
       ),
-      child: const Center(
-        child: Text(
-          'Apollo Norm',
-          style: TextStyle(
-            color: Colors.amber,
-            fontSize: 28,
-          ),
-        ),
-      ),
+      child: const Center(child: StyledText()),
     );
   }
 }
