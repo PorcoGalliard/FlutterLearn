@@ -1,16 +1,33 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(FirstApp());
+void main() {
+  runApp(const MaterialApp(
+    home: Scaffold(
+      body: GradientContainer(),
+    ),
+  ));
+}
 
-class FirstApp extends StatelessWidget {
+class GradientContainer extends StatelessWidget {
+  const GradientContainer({Key? key}) : super(key: key);
+
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Arcturus CXCI'),
+  Widget build(context) {
+    return Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(colors: [
+          Color.fromARGB(255, 49, 12, 112),
+          Color.fromARGB(255, 43, 6, 108)
+        ], begin: Alignment.topLeft, end: Alignment.bottomRight),
+      ),
+      child: const Center(
+        child: Text(
+          'Apollo Norm',
+          style: TextStyle(
+            color: Colors.amber,
+            fontSize: 28,
+          ),
         ),
-        body: Text('This is Arcturus CXCI'),
       ),
     );
   }
